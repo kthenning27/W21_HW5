@@ -6,6 +6,7 @@ class TestCard(unittest.TestCase):
     def test_construct_Card(self):
         c1 = hw5_cards.Card(0, 2)
         c2 = hw5_cards.Card(1, 1)
+        
 
         self.assertEqual(c1.suit, 0)
         self.assertEqual(c1.suit_name, "Diamonds")
@@ -23,6 +24,7 @@ class TestCard(unittest.TestCase):
         self.assertEqual(c2.rank_name, "Ace")
         
     def test_q1(self):
+        c3 = hw5_cards.Card(1, 12)
         '''
         1. fill in your test method for question 1:
         Test that if you create a card with rank 12, its rank_name will be "Queen"
@@ -34,10 +36,12 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        pass
+        self.assertEqual(c3.rank, 12)
+        self.assertEqual(c3.rank_name, "Queen")
         #return X, Y
     
     def test_q2(self):
+        c4 = hw5_cards.Card(1, 1)
         '''
         1. fill in your test method for question 1:
         Test that if you create a card instance with suit 1, its suit_name will be "Clubs"
@@ -49,11 +53,13 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        pass
+        self.assertEqual(c4.suit, 1)
+        self.assertEqual(c4.suit_name, "Clubs")
         #return X, Y    
     
 
     def test_q3(self):
+        c5 = hw5_cards.Card(3, 13)
         '''
         1. fill in your test method for question 3:
         Test that if you invoke the __str__ method of a card instance that is created with suit=3, rank=13, it returns the string "King of Spades"
@@ -66,7 +72,12 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        pass
+        self.assertEqual(c5.rank, 13)
+        self.assertEqual(c5.rank_name, "King")
+        self.assertEqual(c5.suit, 3)
+        self.assertEqual(c5.suit_name, "Spades")
+        self.assertEqual(c5.__str__(), "King of Spades")
+
         #return X, Y
     
     def test_q4(self):
