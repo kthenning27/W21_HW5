@@ -1,6 +1,13 @@
 import unittest
 import hw5_cards
 
+
+
+#########################################
+##### Name:  Katie Henning          #####
+##### Uniqname: khenning            #####
+#########################################
+
 class TestCard(unittest.TestCase):
 
     def test_construct_Card(self):
@@ -36,7 +43,7 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        self.assertEqual(c3.rank, 12)
+        
         self.assertEqual(c3.rank_name, "Queen")
         return c3.rank_name, "Queen"
     
@@ -53,7 +60,7 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        self.assertEqual(c4.suit, 1)
+        
         self.assertEqual(c4.suit_name, "Clubs")
         return c4.suit_name, "Clubs"   
     
@@ -72,10 +79,7 @@ class TestCard(unittest.TestCase):
         ### please note: normally unit test methods do not have return statements. But returning will allow for unit testing of your unit test, and allow you to check your answer with the autograder.  This is optional today.
 
         '''
-        self.assertEqual(c5.rank, 13)
-        self.assertEqual(c5.rank_name, "King")
-        self.assertEqual(c5.suit, 3)
-        self.assertEqual(c5.suit_name, "Spades")
+        
         self.assertEqual(c5.__str__(), "King of Spades")
 
         return c5.__str__(), "King of Spades"
